@@ -6,6 +6,6 @@ package org.dna.mqtt.moquette.server;
  * @author andrea
  */
 public interface IAuthenticator {
-
-    boolean checkValid(String username, String password);
+	
+	boolean checkValid(String username, String password);
 }
