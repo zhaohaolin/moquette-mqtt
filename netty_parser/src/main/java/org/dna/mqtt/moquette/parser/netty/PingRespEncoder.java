@@ -10,9 +10,10 @@ import org.dna.mqtt.moquette.proto.messages.PingRespMessage;
  * @author andrea
  */
 class PingRespEncoder extends DemuxEncoder<PingRespMessage> {
-
-    @Override
-    protected void encode(ChannelHandlerContext chc, PingRespMessage msg, ByteBuf out) {
-        out.writeByte(AbstractMessage.PINGRESP << 4).writeByte(0);
-    }
+	
+	@Override
+	protected void encode(ChannelHandlerContext chc, PingRespMessage msg,
+			ByteBuf out) {
+		out.writeByte(AbstractMessage.PINGRESP << 4).writeByte(0);
+	}
 }

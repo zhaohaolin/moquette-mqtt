@@ -9,5 +9,5 @@ import org.dna.mqtt.moquette.proto.messages.AbstractMessage;
  * @author andrea
  */
 abstract class DemuxEncoder<T extends AbstractMessage> {
-    abstract protected void encode(ChannelHandlerContext chc, T msg, ByteBuf bb);
+	abstract protected void encode(ChannelHandlerContext chc, T msg, ByteBuf bb);
 }

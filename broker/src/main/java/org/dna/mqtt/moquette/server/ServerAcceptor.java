@@ -8,8 +8,8 @@ import org.dna.mqtt.moquette.messaging.spi.IMessaging;
  * @author andrea
  */
 public interface ServerAcceptor {
-    
-    void initialize(IMessaging messaging) throws IOException;
-    
-    void close();
+	
+	void initialize(IMessaging messaging) throws IOException;
+	
+	void close();
 }

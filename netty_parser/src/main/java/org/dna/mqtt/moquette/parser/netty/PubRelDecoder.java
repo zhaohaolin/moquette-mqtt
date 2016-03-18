@@ -8,11 +8,10 @@ import org.dna.mqtt.moquette.proto.messages.PubRelMessage;
  * @author andrea
  */
 class PubRelDecoder extends MessageIDDecoder {
-
-    @Override
-    protected MessageIDMessage createMessage() {
-        return new PubRelMessage();
-    }
-
+	
+	@Override
+	protected MessageIDMessage createMessage() {
+		return new PubRelMessage();
+	}
+	
 }
-

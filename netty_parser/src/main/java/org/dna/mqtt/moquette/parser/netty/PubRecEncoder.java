@@ -10,11 +10,12 @@ import org.dna.mqtt.moquette.proto.messages.PubRecMessage;
  * @author andrea
  */
 class PubRecEncoder extends DemuxEncoder<PubRecMessage> {
-
-    @Override
-    protected void encode(ChannelHandlerContext chc, PubRecMessage msg, ByteBuf out) {
-        out.writeByte(AbstractMessage.PUBREC << 4);
-        out.writeBytes(Utils.encodeRemainingLength(2));
-        out.writeShort(msg.getMessageID());
-    }
+	
+	@Override
+	protected void encode(ChannelHandlerContext chc, PubRecMessage msg,
+			ByteBuf out) {
+		out.writeByte(AbstractMessage.PUBREC << 4);
+		out.writeBytes(Utils.encodeRemainingLength(2));
+		out.writeShort(msg.getMessageID());
+	}
 }

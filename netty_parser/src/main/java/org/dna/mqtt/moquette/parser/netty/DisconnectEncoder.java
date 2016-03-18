@@ -10,10 +10,11 @@ import org.dna.mqtt.moquette.proto.messages.DisconnectMessage;
  * @author andrea
  */
 public class DisconnectEncoder extends DemuxEncoder<DisconnectMessage> {
-
-    @Override
-    protected void encode(ChannelHandlerContext chc, DisconnectMessage msg, ByteBuf out) {
-        out.writeByte(AbstractMessage.DISCONNECT << 4).writeByte(0);
-    }
-    
+	
+	@Override
+	protected void encode(ChannelHandlerContext chc, DisconnectMessage msg,
+			ByteBuf out) {
+		out.writeByte(AbstractMessage.DISCONNECT << 4).writeByte(0);
+	}
+	
 }

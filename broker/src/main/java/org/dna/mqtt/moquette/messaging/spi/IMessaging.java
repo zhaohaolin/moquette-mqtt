@@ -9,10 +9,10 @@ import org.dna.mqtt.moquette.server.ServerChannel;
  * @author andrea
  */
 public interface IMessaging {
-
-    void stop();
-
-    void disconnect(ServerChannel session);
-
-    void handleProtocolMessage(ServerChannel session, AbstractMessage msg);
+	
+	void stop();
+	
+	void disconnect(ServerChannel session);
+	
+	void handleProtocolMessage(ServerChannel session, AbstractMessage msg);
 }
