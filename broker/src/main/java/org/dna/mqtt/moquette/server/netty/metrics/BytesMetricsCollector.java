@@ -8,18 +8,18 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class BytesMetricsCollector {
 	
-	private Queue<BytesMetrics>	_allMetrics	= new ConcurrentLinkedQueue<BytesMetrics>();
+	private Queue<BytesMetrics>	allMetrics	= new ConcurrentLinkedQueue<BytesMetrics>();
 	
 	void addMetrics(BytesMetrics metrics) {
-		_allMetrics.add(metrics);
+		this.allMetrics.add(metrics);
 	}
 	
 	public BytesMetrics computeMetrics() {
-		BytesMetrics allMetrics = new BytesMetrics();
-		for (BytesMetrics m : _allMetrics) {
-			allMetrics.incrementRead(m.readBytes());
-			allMetrics.incrementWrote(m.wroteBytes());
+		BytesMetrics aMetrics = new BytesMetrics();
+		for (BytesMetrics m : allMetrics) {
+			aMetrics.incrementRead(m.readBytes());
+			aMetrics.incrementWrote(m.wroteBytes());
 		}
-		return allMetrics;
+		return aMetrics;
 	}
 }

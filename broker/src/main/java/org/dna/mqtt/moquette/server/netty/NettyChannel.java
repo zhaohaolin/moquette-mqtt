@@ -10,7 +10,7 @@ import org.dna.mqtt.moquette.server.Constants;
 import org.dna.mqtt.moquette.server.ServerChannel;
 
 /**
- *
+ * 
  * @author andrea
  */
 public class NettyChannel implements ServerChannel {
@@ -19,12 +19,12 @@ public class NettyChannel implements ServerChannel {
 	
 	private Map<Object, AttributeKey<Object>>	attributesKeys			= new HashMap<Object, AttributeKey<Object>>();
 	
-	private static final AttributeKey<Object>	ATTR_KEY_KEEPALIVE		= new AttributeKey<Object>(
-																				Constants.KEEP_ALIVE);
-	private static final AttributeKey<Object>	ATTR_KEY_CLEANSESSION	= new AttributeKey<Object>(
-																				Constants.CLEAN_SESSION);
-	private static final AttributeKey<Object>	ATTR_KEY_CLIENTID		= new AttributeKey<Object>(
-																				Constants.ATTR_CLIENTID);
+	private static final AttributeKey<Object>	ATTR_KEY_KEEPALIVE		= AttributeKey
+																				.valueOf(Constants.KEEP_ALIVE);
+	private static final AttributeKey<Object>	ATTR_KEY_CLEANSESSION	= AttributeKey
+																				.valueOf(Constants.CLEAN_SESSION);
+	private static final AttributeKey<Object>	ATTR_KEY_CLIENTID		= AttributeKey
+																				.valueOf(Constants.ATTR_CLIENTID);
 	
 	NettyChannel(ChannelHandlerContext ctx) {
 		channel = ctx;
